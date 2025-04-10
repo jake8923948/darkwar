@@ -2,27 +2,33 @@ name: Deploy
 on:
   push:
     branches: [ main ]
+permissions:
+  contents: write  # Critical for gh-pages deployment
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Set up Python
+        with:
+          fetch-depth: 0  # Required for git history
+
+      - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
-          
+          python-version: "3.12"
+
       - name: Install dependencies
         run: |
           pip install mkdocs-material
-          
+          pip install mkdocs-git-revision-date-localized==1.2.0  # Specific stable version
+
       - name: Build site
         run: mkdocs build --strict
-          
-      - name: Deploy to GitHub Pages
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          keep_files: false
+          force_orphan: true  # Ensures clean gh-pages branch
+          keep_files: false    # Remove old files

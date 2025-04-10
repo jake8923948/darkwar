@@ -1,6 +1,6 @@
 ---
-title: Hi
-content: "*"
+title: test
+content: "* ddd"
 ---
 <link href="https://fonts.googleapis.com/css2?family=Eater&family=Nosifer&family=Charm&display=swap" rel="stylesheet">
 <style>

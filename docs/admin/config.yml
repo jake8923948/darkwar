@@ -19,14 +19,14 @@ collections:
     label: "Navigation"
     files:
       - name: "mkdocs_config"  # Required unique identifier
-        file: "mkdocs.yml"
+        file: "/mkdocs.yml"
         label: "Menu Structure"
         fields:
           - { name: "content", label: "YAML Config", widget: "code" }
 
   - name: "buildings"
     label: "Buildings"
-    folder: "docs/buildings"
+    folder: "/buildings"
     create: true
     slug: "{{slug}}"
     fields:

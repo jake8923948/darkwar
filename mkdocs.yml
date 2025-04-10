@@ -22,6 +22,7 @@ theme:
   features:
     - navigation.footer
     - navigation.instant
+    - content.action.edit
   favicon: /images/logo.jpg
   logo: /images/logo.jpg
   language: en

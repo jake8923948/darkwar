@@ -1,31 +1,32 @@
 backend:
   name: git-gateway
-  branch: main  # Your content branch
+  branch: main
 
-media_folder: "docs/images"  # Where uploaded images go
+media_folder: "docs/images"
 public_folder: "/images"
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "docs/"  # Scans entire docs directory
-    create: true  # Allows new page creation
-    slug: "{{slug}}"  # Auto-generates filenames
+    folder: "docs/"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "content", label: "Content", widget: "markdown" }
+
   - name: "config"
     label: "Navigation"
     files:
-      - file: "mkdocs.yml"
+      - name: "mkdocs_config"  # Required unique identifier
+        file: "mkdocs.yml"
         label: "Menu Structure"
         fields:
           - { name: "content", label: "YAML Config", widget: "code" }
-  
-  # Add buildings collection
+
   - name: "buildings"
     label: "Buildings"
-    folder: "docs/buildings"  # Specific subdirectory
+    folder: "docs/buildings"
     create: true
     slug: "{{slug}}"
     fields:

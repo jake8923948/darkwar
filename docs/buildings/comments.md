@@ -1,5 +1,3 @@
----
-
 <script src="https://giscus.app/client.js"
         data-repo="jake8923948/DW-Comments"
         data-repo-id="R_kgDOOOCjpA"
@@ -13,5 +11,3 @@
         crossorigin="anonymous"
         async>
 </script>
-
----

@@ -1,7 +1,7 @@
 site_name: Dark War Guide
 site_url: https://darkwar.oorion.uk
 #repo_url: https://github.com/jake8923948/darkwar
-edit_uri: edit/main/docs/  # Links to GitHub's editor
+#edit_uri: edit/main/docs/  # Links to GitHub's editor
 nav:
   - Home: index.md
   - Alliance Duel: versus.md

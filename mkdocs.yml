@@ -1,5 +1,5 @@
 site_name: Dark War Guide
-site_url: https://darkwar.oorion.uk
+site_url: http://darkwar.oorion.uk
 nav:
   - Home: index.md
   - Alliance Duel: versus.md

@@ -20,7 +20,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mkdocs-material
-          pip install mkdocs-git-revision-date-localized==1.2.0  # Specific stable version
 
       - name: Build site
         run: mkdocs build --strict

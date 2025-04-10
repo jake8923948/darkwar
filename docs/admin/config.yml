@@ -6,29 +6,11 @@ media_folder: "docs/images"
 public_folder: "/images"
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "docs/"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "content", label: "Content", widget: "markdown" }
-
-  - name: "config"
-    label: "Navigation"
-    files:
-      - name: "mkdocs_config"  # Required unique identifier
-        file: "/mkdocs.yml"
-        label: "Menu Structure"
-        fields:
-          - { name: "content", label: "YAML Config", widget: "code" }
-
-  - name: "buildings"
-    label: "Buildings"
-    folder: "/buildings"
-    create: true
-    slug: "{{slug}}"
+  - name: "content"
+    label: "Content"
+    folder: "docs/"  # Scans ALL Markdown files
+    extension: md
+    format: frontmatter
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "content", label: "Content", widget: "markdown" }
